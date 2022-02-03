@@ -9,6 +9,9 @@ function Destination(props) {
   
   let documentWidth = useWindowDimensions().width
 
+  
+
+  
   if (documentWidth  < 375 ) {
     document.body.style.backgroundImage =
     "url('./assets/destination/background-destination-mobile.jpg')";

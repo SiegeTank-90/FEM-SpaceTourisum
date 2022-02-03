@@ -17,8 +17,8 @@ function Tech(props) {
 
   return (
     <div className="row">
-      <div className={hidden ? "TechImgContainer" : "hidden"}>
-        <img className="" src={imgPosition}></img>
+      <div className={hidden ? "TechImgContainer " : "hidden"}>
+        <img className="imgSize" src={imgPosition}></img>
       </div>
       <div className="TechTextContainer">
         <div className="TechTabsContainer">

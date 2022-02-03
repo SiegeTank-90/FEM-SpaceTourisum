@@ -164,11 +164,6 @@ h6 {
   pointer-events: none;
 }
 
-.TechTabs {
-  width: 50%;
-  display: inline;
-}
-
 .TechImgContainer {
   display: inline-block;
   width: 15%;
@@ -368,11 +363,11 @@ h6 {
     font-family: "Bellefair", sans-serif;
   }
   h2 {
-    font-size: 6.25em;
+    font-size: 3.5em;
     font-family: "Bellefair", sans-serif;
   }
   h3 {
-    font-size: 3.5em;
+    font-size: 2.0em;
     font-family: "Bellefair", sans-serif;
   }
   h4 {
@@ -391,26 +386,105 @@ h6 {
   }
 
   .subHeading {
-    font-size: 1.75em;
     font-family: "Barlow", sans-serif;
   }
 
   .subHeading2 {
-    font-size: 0.875em;
     letter-spacing: 2.35px;
     font-family: "Barlow Condensed", sans-serif;
   }
 
+  .crewImg {
+    max-width: 200px;
+  }
   .destinationContainer {
     margin: 0;
   }
+
+  
+.MainPageText {
+  padding: 10%;
+  text-align: center;
+}
   .pageHeader {
     font-size: 0.75em;
     letter-spacing: 4.75px;
+  }
+  .crewImgContainer {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+
+  }
+  .crewTabs {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+  }
+  .crewTabs-active {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 5px;
+
+  }
+
+  .exploreButton {
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 100%;
   }
 
   .planetSize {
     align-self: center;
     min-width: 250px;
   }
+  .TechTextContainer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .TechTabsContainer{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .TechTabs {
+    width: 35px;
+    height: 35px;
+     display: inline-block;
+    padding: 5px 10px;
+    font-size: .3em;
+
+  }
+
+  .TechTabs-active {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: .3em;
+
+  }
+  .TechTabsTextLoc{
+    margin-top: 10px !important ;
+  }
+
+  .TextSummaryContainer {
+    width: 100%;
+  }
+  .TechImgContainer {
+    margin: 0;
+    padding: 0;
+  }
+  .imgSize {
+    max-width: 375px;
+  }
+  .row {
+    margin: 0;
+    padding: 0;
+  }
+
+
 }
