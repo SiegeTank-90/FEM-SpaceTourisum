@@ -7,7 +7,7 @@ function Location(props) {
 
   return (
     <div className="row">
-      <div className="row align-self-start col-md-6 pe-5">
+      <div className="row align-self-start col-md-6 pe-1">
         <img className="planetSize" src={props.img}></img>
       </div>
       <div className="col-md-12 col-lg-5 ps-5">
@@ -21,7 +21,7 @@ function Location(props) {
           </div>
           <div className="col-md-6">
             <h6 className="subHeading2 altColor">EST. TRAVEL TIME</h6>
-            <h6 className="subHeading">{props.travel}</h6>
+            <h6 className="subHeading ">{props.travel}</h6>
           </div>
         </div>
       </div>

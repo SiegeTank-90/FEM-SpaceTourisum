@@ -23,8 +23,8 @@ function Home() {
       <div className="row align-self-end">
         <div className="col-lg-6 MainPageText">
           <div className="">
-            <h3 className="pb-5 altColor"> So, you want to travel to </h3>
-            <h1 className="pb-2"> SPACE </h1>
+            <h3 className="altColor"> So, you want to travel to </h3>
+            <h1 className=""> SPACE </h1>
             <h5 className="altColor">
               {" "}
               Let’s face it; if you want to go to space, you might as well
