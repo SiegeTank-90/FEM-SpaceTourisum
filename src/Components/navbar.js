@@ -1,6 +1,8 @@
 import logo from "../assets/shared/logo.svg";
 import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
+import useWindowDimensions from "./windowDemension";
+import CollapseNavebar from "./collapseNavbar";
 
 function NavBar() {
   function HoverState(event) {
@@ -9,6 +11,10 @@ function NavBar() {
     } else {
       event.target.className = "p-5 col-3 NavItem";
     }
+  }
+
+  if (useWindowDimensions().width < 1080) {
+    return <CollapseNavebar hover={HoverState} />;
   }
 
   return (
@@ -23,16 +29,36 @@ function NavBar() {
           <div className="col-12 nav-line"></div>
         </div>
         <div className="col-lg-6 row navGloss">
-          <Link className="p-5 col-3 NavItem" onMouseOver={HoverState} onMouseOut={HoverState} to="/">
+          <Link
+            className="p-5 col-3 NavItem"
+            onMouseOver={HoverState}
+            onMouseOut={HoverState}
+            to="/"
+          >
             00 Home
           </Link>
-          <Link className="p-5 col-3 NavItem" onMouseOver={HoverState} onMouseOut={HoverState} to="Destination">
+          <Link
+            className="p-5 col-3 NavItem"
+            onMouseOver={HoverState}
+            onMouseOut={HoverState}
+            to="Destination"
+          >
             01 Destinations
           </Link>
-          <Link className="p-5 col-3 NavItem" onMouseOver={HoverState} onMouseOut={HoverState} to="Crew">
+          <Link
+            className="p-5 col-3 NavItem"
+            onMouseOver={HoverState}
+            onMouseOut={HoverState}
+            to="Crew"
+          >
             02 Crew
           </Link>
-          <Link className="p-5 col-3 NavItem" onMouseOver={HoverState} onMouseOut={HoverState} to="Technology">
+          <Link
+            className="p-5 col-3 NavItem"
+            onMouseOver={HoverState}
+            onMouseOut={HoverState}
+            to="Technology"
+          >
             03 Technology
           </Link>
         </div>
