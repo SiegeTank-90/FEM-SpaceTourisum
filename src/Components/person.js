@@ -10,7 +10,7 @@ function Person(props) {
   ];
 
   crewTabs.splice(
-    props.position - 1,
+    props.position,
     1,
     <div className="crewTabs-active"> </div>
   );

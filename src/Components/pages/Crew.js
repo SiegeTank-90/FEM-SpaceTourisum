@@ -21,10 +21,10 @@ function Crew(props) {
   let CrewPage = 0;
 
   function FindCrewMate(event) {
-    let FoundCrewMember = props.crew[CrewPage];
     CrewPage++;
-    if (CrewPage == 4) {
-      CrewPage = 0;
+    let FoundCrewMember = props.crew[CrewPage];
+    if (CrewPage == 3) {
+      CrewPage = -1;
     }
     setCrew(
       <Person
@@ -34,7 +34,7 @@ function Crew(props) {
         bio={FoundCrewMember.bio}
         Find={FindCrewMate}
         position={CrewPage}
-        windowSize={documentWidth}
+     
       />
     );
   }
@@ -47,7 +47,7 @@ function Crew(props) {
     bio="Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
     Find={FindCrewMate}
     postion={CrewPage}
-    windowSize={documentWidth}
+
   />
   );
 
