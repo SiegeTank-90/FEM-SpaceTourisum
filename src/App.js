@@ -12,15 +12,15 @@ import Data from "./data.json";
 
 function App() {
   const { destinations, crew, technology } = Data;
-  
+   
   return (
     <div className="App">
          <NavBar />
       <Routes>
         <Route index path="/" element={<Home />}/>
-        <Route path="Destination" element={<Destination destinations={destinations} />}/>
-        <Route path="Crew" element={<Crew crew={crew}/>}/>
-        <Route path="Technology" element={<Technology technology={technology} />}/>
+        <Route path="Destination" element={<Destination destinations={destinations}   />}/>
+        <Route path="Crew" element={<Crew crew={crew}  />}/>
+        <Route path="Technology" element={<Technology technology={technology}  />}/>
         <Route path="*" element={<Hi404/>} />
       </Routes>
     </div>

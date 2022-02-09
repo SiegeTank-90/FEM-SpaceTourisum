@@ -1,24 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useWindowDimensions from "../windowDemension";
+import removeBackground from "../removeBackground";
 
-function Home() {
-
+function Home(props) {
+  let backgroundSize = ""
   let documentWidth = useWindowDimensions().width
 
-  if (documentWidth  < 375 ) {
-    document.body.style.backgroundImage =
-    "url('./assets/home/background-home-mobile.jpg')";
-   
+  if (documentWidth <= 375 ) {
+    backgroundSize = "HomeBackgroundMobile"
   } else  if (documentWidth  < 775 ) {
-    document.body.style.backgroundImage =
-    "url('./assets/home/background-home-tablet.jpg')";
+    backgroundSize = "HomeBackgroundTablet"
   } else {
-    document.body.style.backgroundImage =
-    "url('./assets/home/background-home-desktop.jpg')";
+    backgroundSize = "HomeBackgroundDesktop"  
   }
 
-  return (
+  removeBackground()
+  document.body.classList.add(backgroundSize)
+
+
+   return (
     <div classNamne="container">
       <div className="row align-self-end">
         <div className="col-lg-6 MainPageText">

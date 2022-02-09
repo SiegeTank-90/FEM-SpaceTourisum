@@ -1,29 +1,32 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import { Router } from "react-router";
 import Person from "../person.js";
 import useWindowDimensions from "../windowDemension.js";
+import removeBackground from "../removeBackground.js";
 
 function Crew(props) {
-  let documentWidth = useWindowDimensions().width;
+  let backgroundSize = ""
+  let documentWidth = useWindowDimensions().width
 
-  if (documentWidth < 375) {
-    document.body.style.backgroundImage =
-      "url('./assets/crew/background-crew-mobile.jpg')";
-  } else if (documentWidth < 775) {
-    document.body.style.backgroundImage =
-      "url('./assets/crew/background-crew-tablet.jpg')";
+  if (documentWidth < 375 ) {
+    backgroundSize = "CrewBackgroundMobile"
+  } else  if (documentWidth  < 775 ) {
+    backgroundSize = "CrewBackgroundTablet"
   } else {
-    document.body.style.backgroundImage =
-      "url('./assets/crew/background-crew-desktop.jpg')";
+    backgroundSize = "CrewBackgroundDesktop"  
   }
+
+  
+  removeBackground()
+  document.body.classList.add(backgroundSize)
+
+
 
   let CrewPage = 0;
 
   function FindCrewMate(event) {
     CrewPage++;
     let FoundCrewMember = props.crew[CrewPage];
-    if (CrewPage == 3) {
+    if (CrewPage === 3) {
       CrewPage = -1;
     }
     setCrew(

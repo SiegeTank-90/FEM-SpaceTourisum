@@ -2,37 +2,37 @@ import React, {useState } from "react"
 import ReactDOM from "react-dom"
 import { Router } from "react-router"
 import Tech from "../Tech"
-import useWindowDimensions from "../windowDemension"
+import useWindowDimensions from "../windowDemension.js"
+import removeBackground from "../removeBackground.js"
 
 
 
 
 function Technology(props) {
-   
+  let backgroundSize = ""
   let documentWidth = useWindowDimensions().width
 
-  if (documentWidth  < 375 ) {
-    document.body.style.backgroundImage =
-    "url('./assets/technology/background-technology-mobile.jpg')";
-      
-  } else if (documentWidth  < 775 ) {
-    document.body.style.backgroundImage =
-    "url('./assets/technology/background-technology-tablet.jpg')";
+  if (documentWidth < 375 ) {
+    backgroundSize = "TechnologyBackgroundMobile"
+  } else  if (documentWidth  < 775 ) {
+    backgroundSize = "TechnologyBackgroundTablet"
   } else {
-    document.body.style.backgroundImage =
-    "url('./assets/technology/background-technology-desktop.jpg')";
+    backgroundSize = "TechnologyBackgroundDesktop"  
   }
+
+  removeBackground()
+  document.body.classList.add(backgroundSize)
 
     
     let Technologies = props.technology[0]
     
     function TechPage(event) {
         let target = event.target.id
-        if (target == "LaunchVehicle") {
+        if (target === "LaunchVehicle") {
           Technologies = props.technology[0]
-        } else if ( target == "SpacePort") {
+        } else if ( target === "SpacePort") {
           Technologies = props.technology[1]
-        } else if ( target ==  "SpaceCapsule") {
+        } else if ( target ===  "SpaceCapsule") {
           Technologies = props.technology[2]
         }
       
@@ -55,8 +55,6 @@ function Technology(props) {
         <Tech
           name= {Technologies.name}
           desc= {Technologies.description}
-          imgPort= {Technologies.images.portrait}
-          imgLand= {Technologies.images.landscape}  
           TechPage= {TechPage}
           target="LaunchVehicle"
         />

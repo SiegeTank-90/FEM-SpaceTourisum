@@ -16,6 +16,50 @@ a :focus {
   color: white;
 }
 
+/* ******BACKGROUNDS********* */
+
+.HomeBackgroundDesktop{
+  background-image: url("./assets/home/background-home-desktop.jpg");
+}
+.HomeBackgroundTablet{
+  background-image: url("./assets/home/background-home-tablet.jpg");
+}
+.HomeBackgroundMobile{
+  background-image: url("./assets/home/background-home-mobile.jpg");
+}
+
+.CrewBackgroundDesktop{
+  background-image: url("./assets/crew/background-crew-desktop.jpg");
+}
+.CrewBackgroundTablet{
+  background-image: url("./assets/crew/background-crew-tablet.jpg");
+}
+.CrewBackgroundMobile{
+  background-image: url("./assets/crew/background-crew-mobile.jpg");
+}
+
+.DestinationBackgroundDesktop{
+  background-image: url("./assets/destination/background-destination-desktop.jpg");
+}
+.DestinationBackgroundTablet{
+  background-image: url("./assets/destination/background-destination-tablet.jpg");
+}
+.DestinationBackgroundMobile{
+  background-image: url("./assets/destination/background-destination-mobile.jpg");
+}
+
+.TechnologyBackgroundDesktop{
+  background-image: url("./assets/technology/background-technology-desktop.jpg");
+}
+.TechnologygroundTablet{
+  background-image: url("./assets/technology/background-technology-tablet.jpg");
+}
+.TechnologyBackgroundMobile{
+  background-image: url("./assets/technology/background-technology-mobile.jpg");
+}
+
+/* ******BACKGROUNDS********* */
+
 h1 {
   font-size: 9.375em;
   font-family: "Bellefair", sans-serif;

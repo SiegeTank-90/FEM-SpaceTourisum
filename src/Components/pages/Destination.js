@@ -1,35 +1,31 @@
 import React, { useState } from "react";
-import { resolvePath } from "react-router";
 import Location from "../location";
 import useWindowDimensions from "../windowDemension";
+import removeBackground from "../removeBackground";
 
 
 
 function Destination(props) {
-  
+  let backgroundSize = ""
   let documentWidth = useWindowDimensions().width
 
-  
-
-  
-  if (documentWidth  < 375 ) {
-    document.body.style.backgroundImage =
-    "url('./assets/destination/background-destination-mobile.jpg')";
-   
-  } else if (documentWidth  < 775 ) {
-    document.body.style.backgroundImage =
-    "url('./assets/destination/background-destination-tablet.jpg')";
+  if (documentWidth < 375 ) {
+    backgroundSize = "DestinationBackgroundMobile"
+  } else  if (documentWidth  < 775 ) {
+    backgroundSize = "DestinationBackgroundTablet"
   } else {
-    document.body.style.backgroundImage =
-    "url('./assets/destination/background-destination-desktop.jpg')";
+    backgroundSize = "DestinationBackgroundDesktop"  
   }
+
+  removeBackground()
+  document.body.classList.add(backgroundSize)
 
 
   function FindPlanet(event) {
         
     let planet = event.target.innerHTML;
     let Foundplanet = props.destinations.find(
-      (planets) => planets.name == planet
+      (planets) => planets.name === planet
     );
     setMap(
       <Location

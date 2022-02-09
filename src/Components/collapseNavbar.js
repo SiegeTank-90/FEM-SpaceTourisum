@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/shared/logo.svg";
 import hamburger from "../assets/shared/icon-hamburger.svg";
 import close_ham from "../assets/shared/icon-close.svg";
@@ -9,11 +9,11 @@ function CollapseNavbar(props) {
 
   function isMenuOpen() {
 
-        if (isOpen == "off") {
+        if (isOpen === "off") {
             setisOpen("Open")
-        } else if (isOpen == "Open") {
+        } else if (isOpen === "Open") {
             setisOpen("Closed")
-        } else if (isOpen == "Closed") {
+        } else if (isOpen === "Closed") {
             setisOpen("Open")
         } 
     
@@ -24,11 +24,12 @@ function CollapseNavbar(props) {
       <div className="container-fluid index">
         <div className="row justify-content-between">
           <Link className="col-2" to="/">
-            <img className="navlogo" src={logo}></img>
+            <img className="navlogo" alt="Navigation Logo" src={logo}></img>
           </Link>
           <div className="col-2">
             <img
-              className={ (isOpen == "Open") ? "hidden" : "hamburger-Closed" }
+              alt="Navigation Menu Button"
+              className={ (isOpen === "Open") ? "hidden" : "hamburger-Closed" }
               src={hamburger}
               onClick={isMenuOpen}
             />
@@ -37,6 +38,7 @@ function CollapseNavbar(props) {
       </div>
       <div className={`Menu-${isOpen}`}>
         <img
+          alt="Navigation Menu Close"
           className="hamburger-Open"
           src={close_ham}
           onClick={isMenuOpen}

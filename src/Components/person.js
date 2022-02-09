@@ -1,7 +1,29 @@
 import React from "react";
 import useWindowDimensions from "./windowDemension";
+import Doug from "../assets/crew/image-douglas-hurley.webp"
+import Ansari from "../assets/crew/image-anousheh-ansari.webp"
+import Mark from "../assets/crew/image-mark-shuttleworth.webp"
+import Victor from "../assets/crew/image-victor-glover.webp"
+
 
 function Person(props) {
+
+  let personImg = ""
+
+  if (props.name === "Douglas Hurley") {
+    personImg = Doug
+  } else  if (props.name === "Mark Shuttleworth") {
+    personImg = Mark
+  } else  if (props.name === "Victor Glover") {
+    personImg = Victor
+  } else  if (props.name === "Anousheh Ansari") {
+    personImg =  Ansari
+  }
+
+
+
+
+
   let crewTabs = [
     <div className="crewTabs"> </div>,
     <div className="crewTabs"> </div>,
@@ -20,7 +42,7 @@ function Person(props) {
     return (
       <div className="" onClick={props.Find}>
         <div className="crewImgContainer">
-          <img className="crewImg" src={props.img} />
+          <img className="crewImg" alt="CrewMember" src={personImg} />
         </div>
         <div className="crewTextContainer">
           <div className="crewTabContainers">{crewTabs}</div>
@@ -44,7 +66,7 @@ function Person(props) {
       </div>
 
       <div className="crewImgContainer">
-        <img className="crewImg" src={props.img} />
+        <img className="crewImg" alt="CrewMember" src={personImg} />
       </div>
     </div>
   );

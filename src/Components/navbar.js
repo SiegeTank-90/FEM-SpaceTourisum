@@ -1,12 +1,12 @@
 import logo from "../assets/shared/logo.svg";
-import React, { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import useWindowDimensions from "./windowDemension";
 import CollapseNavebar from "./collapseNavbar";
 
 function NavBar() {
   function HoverState(event) {
-    if (event.target.className == "p-5 col-3 NavItem") {
+    if (event.target.className === "p-5 col-3 NavItem") {
       event.target.className = event.target.className + " nav-item-hovered";
     } else {
       event.target.className = "p-5 col-3 NavItem";
@@ -22,7 +22,7 @@ function NavBar() {
       <div className="row NavText p-5">
         <div className="col-lg-1 p-2">
           <Link to="/">
-            <img className="navlogo" src={logo}></img>
+            <img className="navlogo" alt="Navigation Logo" src={logo}></img>
           </Link>
         </div>
         <div className="col-lg-5 p-5 align-self-center ">
