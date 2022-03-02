@@ -7,7 +7,7 @@ import App from './App';
 
 
 ReactDOM.render(
-  <BrowserRouter basename='/'>
+  <BrowserRouter basename='/cj-cline-porfolio.website'>
     <App />
   </BrowserRouter>,
   document.getElementById('root')
