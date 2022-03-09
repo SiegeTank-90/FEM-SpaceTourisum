@@ -7,7 +7,7 @@ import App from './App';
 
 
 ReactDOM.render(
-  <BrowserRouter basename='https://siegetank-90.github.io/FEM-SpaceTourisum/'>
+  <BrowserRouter basename="/">
     <App />
   </BrowserRouter>,
   document.getElementById('root')
