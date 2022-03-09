@@ -43,7 +43,7 @@ function CollapseNavbar(props) {
           src={close_ham}
           onClick={isMenuOpen}
         />
-        <Link className="NavItem-mobile" to="/">
+        <Link className="NavItem-mobile" to="FEM-SpaceTourisum">
           00 Home
         </Link>
         <Link className="NavItem-mobile" to="Destination">
