@@ -429,6 +429,7 @@ h6 {
   @keyframes slideIn {
     from {
       transform: translateX(200%);
+      display: hidden;
     }
 
     to {
@@ -445,6 +446,7 @@ h6 {
     to {
       transform: translateX(200%);
       left: 100%;
+      display: hidden;
     }
   }
 }
