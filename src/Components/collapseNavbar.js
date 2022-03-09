@@ -23,7 +23,7 @@ function CollapseNavbar(props) {
     <nav>
       <div className="container-fluid index">
         <div className="row justify-content-between">
-          <Link className="col-2" to="/">
+          <Link className="col-2" to="FEM-SpaceTourisum">
             <img className="navlogo" alt="Navigation Logo" src={logo}></img>
           </Link>
           <div className="col-2">
