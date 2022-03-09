@@ -584,6 +584,9 @@ h6 {
     height: 10px;
     margin: 5px;
   }
+  .container-fluid {
+    overflow: hidden;
+  }
   .crewTabs-active {
     width: 10px;
     height: 10px;
